@@ -17,8 +17,8 @@ function App() {
     fetchTodos();
   };
 
-  const deleteTodo = async (id) => {
-    await axios.delete(`https://todo-backend-qkks.onrender.com/todos/${id}`);
+  const deleteTodo = async (DelId) => {
+    await axios.delete(`https://todo-backend-qkks.onrender.com/todos/${DelId}`);
     fetchTodos();
   };
 
@@ -171,7 +171,7 @@ function App() {
                 {todo.title}
               </span>
               <button
-                onClick={() => deleteTodo(todo.id)}
+                onClick={() => {deleteTodo(todo.id)}}
                 style={{
                   padding: '8px',
                   fontSize: '1rem',
