@@ -6,13 +6,13 @@ function App() {
   const [title, setTitle] = useState('');
 
   const fetchTodos = async () => {
-    const res = await axios.get('https://todo-wkwv.onrender.com');
+    const res = await axios.get('https://todo-wkwv.onrender.com/todos');
     setTodos(res.data);
   };
 
   const addTodo = async () => {
     if (title.trim() === '') return;
-    await axios.post('https://todo-wkwv.onrender.com', { title });
+    await axios.post('https://todo-wkwv.onrender.com/todos', { title });
     setTitle('');
     fetchTodos();
   };
