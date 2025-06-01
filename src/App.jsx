@@ -18,7 +18,7 @@ function App() {
   };
 
   const deleteTodo = async (id) => {
-    await axios.delete(`https://todo-wkwv.onrender.com/${id}`);
+    await axios.delete(`https://todo-wkwv.onrender.com/todos/${id}`);
     fetchTodos();
   };
 
