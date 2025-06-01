@@ -93,7 +93,7 @@ function App() {
           {todos.map((todo) => (
             <li key={todo.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '15px', marginBottom: '15px', backgroundColor: '#2d2d2d', borderRadius: '4px', border: '1px solid #4a4a4a' }}>
               <span style={{ fontSize: '1.2rem', fontWeight: '500' }}>{todo.title}</span>
-              <button onClick={() => deleteTodo(todo.id)} style={{ backgroundColor: '#ef4444', color: '#fff', border: 'none', borderRadius: '4px', width: '32px', height: '32px', cursor: 'pointer' }}>
+              <button onClick={() => {deleteTodo(todo.id)}} style={{ backgroundColor: '#ef4444', color: '#fff', border: 'none', borderRadius: '4px', width: '32px', height: '32px', cursor: 'pointer' }}>
                 ❌
               </button>
             </li>
